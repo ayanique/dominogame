@@ -1,0 +1,57 @@
+{
+	"name": "domino-game",
+	"version": "2.0.2",
+	"description": "Domino is a game made in node websocket.",
+	"main": "./._build/Server.js",
+	"engines": {
+		"node": "10.18.0"
+	},
+	"scripts": {
+		"build": "tslint --project . && tsc",
+		"serve": "nodemon --watch \"src/**/*\" -e ts --exec \"ts-node -r tsconfig-paths/register\" ./src/Server.ts",
+		"start": "node ./._build/Server.js",
+		"lint:ts:base": "tslint --project tsconfig.json --config tslint.json",
+		"lint:ts": "npm run lint:ts:base \"src/**/*.ts\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/felipefm32/NodeDomino.git"
+	},
+	"keywords": [
+		"Domino",
+		"Game",
+		"Websocket",
+		"Online",
+		"Express",
+		"HTML5",
+		"Typescript",
+		"socket.io"
+	],
+	"author": {
+		"name": "Felipe Mateus",
+		"email": "contato@felipefm32.com.br",
+		"url": "https://felipemateus.com/"
+	},
+	"license": "CC",
+	"dependencies": {
+		"dotenv": "8.2.0",
+		"express": "^4.16.4",
+		"express-session": "~1.15.1",
+		"socket.io": "^2.2.0"
+	},
+	"devDependencies": {
+		"@types/socket.io": "^2.1.2",
+		"@types/node": "^7.0.5",
+		"nodemon": "^1.11.0",
+		"typescript": "3.7.2",
+		"@types/dotenv": "8.2.0",
+		"ts-node": "3.3.0",
+		"tsconfig-paths": "3.9.0",
+		"tslint": "5.7.0",
+		"lint-staged": "9.5.0"
+	},
+	"bugs": {
+		"url": "https://github.com/felipefm32/NodeDomino/issues"
+	},
+	"homepage": "https://domino.felipefm32.com"
+}
