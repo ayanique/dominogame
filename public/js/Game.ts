@@ -72,7 +72,7 @@ class Game{
 		this.CloseToken();
 	}
 	private downTabScroll(){
-		let objDiv = document.getElementById("tabuleiro");
+		let objDiv = document.getElementById("board");
 		objDiv.scrollTop = objDiv.scrollHeight;
 	}
 
@@ -93,7 +93,7 @@ class Game{
 						if(this.isDouble(nums))  (<Element>clone).classList.add("R90");
 						if(this.isInverted(nums))  (<Element>clone).classList.add("R180");
 
-						document.getElementById("tabuleiro").appendChild(clone);
+						document.getElementById("board").appendChild(clone);
 						this.downTabScroll();
 						(<Element>e.srcElement).parentElement.remove();
 
@@ -154,7 +154,7 @@ class Game{
 
 			let card  = this.newCard(msg.value,horizontal,invertido);
 
-			document.getElementById("tabuleiro").appendChild(card);
+			document.getElementById("board").appendChild(card);
 			this.downTabScroll();
 			this.Ultimo= msg.last;
 		});

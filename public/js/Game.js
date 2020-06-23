@@ -81,7 +81,7 @@ var Game = /** @class */ (function () {
         this.CloseToken();
     };
     Game.prototype.downTabScroll = function () {
-        var objDiv = document.getElementById("tabuleiro");
+        var objDiv = document.getElementById("board");
         objDiv.scrollTop = objDiv.scrollHeight;
     };
     Game.prototype.createHand = function (Hand) {
@@ -93,7 +93,7 @@ var Game = /** @class */ (function () {
             dices.forEach(function (dice, index) {
                 dice.classList.add("hand");
                 dice.addEventListener("click", function (e) {
-                    //Aqui entra Função Pra selecionar Peça no tabuleiro
+                    //Aqui entra Função Pra selecionar Peça no board
                     if (!_this.isAllowed(nums, nums[index]))
                         return false;
                     var clone = e.srcElement.parentElement.cloneNode(true);
@@ -129,7 +129,7 @@ var Game = /** @class */ (function () {
         }
     };
     Game.prototype.Reiniciar = function () {
-        document.getElementById("tabuleiro").innerHTML = "";
+        document.getElementById("board").innerHTML = "";
         var cards = document.querySelectorAll("#hand > div:not(#wait) ");
         cards.forEach(function (card) {
             card.parentNode.removeChild(card);
@@ -160,7 +160,7 @@ var Game = /** @class */ (function () {
             if (_this.isInverted(msg.value))
                 invertido = true;
             var card = _this.newCard(msg.value, horizontal, invertido);
-            document.getElementById("tabuleiro").appendChild(card);
+            document.getElementById("board").appendChild(card);
             _this.downTabScroll();
             _this.Ultimo = msg.last;
         });

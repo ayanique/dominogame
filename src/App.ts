@@ -82,7 +82,7 @@ class App {
                 const gamer = domino.Gamers.indexOf(socket);
                 domino.Gamers.splice(gamer, 1);
                 if (this.debug) { console.info('User disconnected!'); }
-                this.reboot(`Player ${(gamer) + 1} disconnected! ` );
+                this.reboot(`O Jogador ${(gamer) + 1} desconectou! ` );
             });
         });
     }
