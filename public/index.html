@@ -10,6 +10,7 @@
 <style>
 body{
 	min-width:1024px;
+	background-color: #f6f6f7;
 }
 .card{
 	border:1px solid #000;
@@ -58,18 +59,17 @@ body{
 	border-bottom:2px solid #000;
 	overflow-y: scroll;
 	display:inline-block;
-	background-image: radial-gradient(#08aa4b, #006006);
+	background-image: url('/img/background.png');
 }
 .stat{
-	height:350px;
-	width:28%;
+	height:465px;
+	width:360px;
 	margin-top: -145px;
 	float:right;
-	box-shadow: rgb(163, 163, 163) -2px 2px 11px -2px;
 	padding: 0 10px;
-	border: 1px solid #bdbdbd;
-	border-radius: 5px;
-	font-family: Arial;
+	font-family: 'Open Sans';
+	background-color: #22252a;
+	margin-right: 29px;
 }
 .stat h1{
 	text-align:center;
@@ -93,7 +93,7 @@ body{
 	background:#0DF;
 }
 .stat .jogadores tr:nth-child(4){
-	background:#DF0;
+	background:#ab00ff;
 }
 
 .stat .jogadores tr td:nth-child(1){
@@ -106,11 +106,14 @@ body{
 }
 #hand{
 	display:inline-block;
-	width:60.9%;
+	width:85%;
 	position:relative;
 	padding:5px;
 	vertical-align:middle;
-
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	margin-left: 7%;
 }
 #hand .card{
 	display:inline-block;
@@ -143,8 +146,8 @@ body{
 	display:inline-block;
 	border:2px solid #000;
 	border-radius:35px;
-	padding:5px;
-	margin:0 auto;
+	padding:5px 20px;
+	margin:15px 45%;
 	font-weight:bolder;
 	background-color: yellow;
 }
@@ -168,7 +171,6 @@ body{
 	float:right;
 }
 .chatroom{
-	border: 1px solid #000;
 	border-radius: 5px;
 	height:300px;
 	width:29.5%;
@@ -177,10 +179,11 @@ body{
 .chat-inp{
 	margin: -5px 10px 0 10px;
 	width: 75%;
-	height: 15%;
-	font-family: Arial;
+	height: 49px;
+	font-family: 'Open Sans';
 	font-size: 16px;
-	border: 0;
+	border: 1px solid #8a8a8a;
+	padding-left: 5px;
 }
 .chat-btn{
 	background-color: #2780ce;
@@ -188,6 +191,43 @@ body{
 	padding: 2px;
 	border-radius: 15px;
 	padding: 5px 15px;
+}
+.container {
+  background-image: url('/img/background.png');
+	margin-right: 425px;
+	height: 322px;
+}
+.left-msg{
+	display:inline;
+	margin-left: 7px;
+	font-family: 'Open Sans';
+	font-size: 13px;
+	font-weight: 600;
+}
+.right-msg{
+	display:inline;
+	margin-left: -145px;
+	font-family: 'Open Sans';
+	font-size: 13px;
+	font-weight: 600;
+}
+.time-left{
+		font-size: 9px;
+    margin-left: 72px;
+    margin-top: -18px;
+		margin-bottom: -5px;
+    font-family: 'Open Sans';
+		color: #99999e;
+		font-weight: 600;
+}
+.time-right{
+		font-size: 9px;
+    margin-left: 248px;
+    margin-top: -18px;
+		margin-bottom: -5px;
+    font-family: 'Open Sans';
+		color: #99999e;
+		font-weight: 600;
 }
 </style>
 <head>
@@ -198,30 +238,41 @@ body{
 		</div>
 			<div class="chatroom">
 				<div>
-					<p style="height: 215px; border-bottom: 1px solid #cecece;"></p>
-					<input class="chat-inp" placeholder="Type message here" type="text" /><button class="chat-btn" type="button">Send</button>
+					<div style="height: 225px; border: 1px solid #cecece; border-radius: 4px; margin: 0 0 4% 10px; width: 380px; background-color: white;">
+						<p style="margin-left: 10px; margin-top: 10px; font-size: 18px; font-weight: bold; font-family: 'Open Sans';">Chat</p>
+						<hr style="width: 120px; height: 2px; margin-left: 10px; margin-top: -10px; border-width:0; color:black; background-color:#fd4f51;">
+						<hr style="width: 235px; height: 2px; margin-left: 135px; margin-top: -10px; border-width:0; color:black; background-color:#f2f2f3;">
+						<img src='/img/user.png' style="vertical-align: middle; height: 50px; margin-left: 15px; margin-top: 5px;"/><p class="left-msg">I am winning</p><br>
+						<p class="time-left">6 minutes ago</p>
+						<img src='/img/profile.png' style="vertical-align: middle; height: 50px; margin-left: 315px; margin-top: 10px;"/><p class="right-msg">No you're not!</p><br>
+						<p class="time-right">5 minutes ago</p>
+						<img src='/img/blankuser.png' style="vertical-align: middle; height: 50px; margin-left: 15px; margin-top: 10px;"/><p class="left-msg">My Turn</p><br>
+						<p class="time-left">2 minutes ago</p>
 
+					</div>
+					<input class="chat-inp" placeholder="Type message here" type="text" />
+					<img src='/img/send-icon.png' style="vertical-align: middle;"/>
 				</div>
 			</div>
 		<div class="stat">
-			<h1>Statistics</h1>
-			<table>
-				<tr><td>Online players:</td><td id="gamers">0</td></tr>
-				<tr><td>Cards on the Board:</td><td id="tab">0</td></tr>
-				<tr><td>Cards in Hands:</td><td id="cards_in_hand">0</td></tr>
-				<tr><td>Player Number:</td><td id="gamer_num">0</td></tr>
-				<tr><td>Game Status:</td><td id="status">Waiting for players...</td></tr>
+			<p style="color: #e4fd55; font-size: 18px; text-align: left; margin-left: 3px; margin-bottom: 5px;">STATISTICS</p>
+			<table style="color: white;">
+				<tr><td>Online players:</td><td style="color: #e4fd55; padding-left: 10px;" id="gamers">0</td></tr>
+				<tr><td>Cards on the Board:</td><td style="color: #e4fd55; padding-left: 10px;" id="tab">0</td></tr>
+				<tr><td>Cards:</td><td style="color: #e4fd55; padding-left: 10px;" id="cards_in_hand">0</td></tr>
+				<tr><td>Player Number:</td><td style="color: #e4fd55; padding-left: 10px;" id="gamer_num">0</td></tr>
+				<tr><td>Game Status:</td><td style="color: #ea3628; padding-left: 10px;" id="status">Waiting for players...</td></tr>
 			</table>
-
+			<p style="height: 30px; background-color: #f7f7f8; margin-left: -11px; width: 422px;"></p>
 			<table class="jogadores">
-				<tr><td id="gamerName_0">Player1</td><td> <input type="radio" name="token" id="Tokenjogador_0" disabled /></td></tr>
-				<tr><td id="gamerName_1">Player2</td><td> <input type="radio" name="token" id="Tokenjogador_1" disabled /></td></tr>
-				<tr><td id="gamerName_2">Player3</td><td> <input type="radio" name="token" id="Tokenjogador_2" disabled /></td></tr>
-				<tr><td id="gamerName_3">Player4</td><td> <input type="radio" name="token" id="Tokenjogador_3" disabled /></td></tr>
+				<tr style="margin-bottom: 1px;"><td style="color: white;" id="gamerName_0">Player1</td><td> <input type="radio" name="token" id="Tokenjogador_0" disabled /></td></tr>
+				<tr><td style="color: white;" id="gamerName_1">Player2</td><td> <input type="radio" name="token" id="Tokenjogador_1" disabled /></td></tr>
+				<tr><td style="color: white;" id="gamerName_2">Player3</td><td> <input type="radio" name="token" id="Tokenjogador_2" disabled /></td></tr>
+				<tr><td style="color: white;" id="gamerName_3">Player4</td><td> <input type="radio" name="token" id="Tokenjogador_3" disabled /></td></tr>
 			</table>
 		</div>
 	</div>
-	<div>
+	<div class="container">
 		<div id="hand">
 			<!--- Minhas Cartas -->
 			<div id="wait"></div>
