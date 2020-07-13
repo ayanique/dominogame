@@ -1,0 +1,174 @@
+#game-screen{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+  height:100%;
+  position:relative;
+
+  .close{
+    position: absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+  }
+
+  jn-player{
+    position: absolute;
+    opacity:0.7;
+    z-index:100;
+  }
+
+  jn-player.top{
+    top:2px;
+    margin-left:-25px;
+  }
+
+  jn-player.left{
+    top:calc(50vh - 37.5px);
+    left:-82.5px;
+    margin-top:30px;
+  }
+
+  jn-player.right{
+    top:calc(50vh - 37.5px);
+    right:-82.5px;
+    margin-top:-30px;
+  }
+
+  .playClock{
+    width:105px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+  }
+
+  .active-player{
+    position:absolute;
+    bottom:5px;
+    right:10px;
+
+    jn-player{
+      position:static;
+    }
+
+    .hand{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:95px;
+      margin-bottom:15px;
+      margin-right: 450px;
+
+      jn-domino{
+        transform:rotate(90deg);
+        margin:0px 10px;
+      }
+
+      jn-domino.active{
+        margin-top:-50px;
+      }
+    }
+  }
+
+  jn-player.active{
+    opacity:1;
+  }
+
+  .status-dial{
+    position:absolute;
+    bottom:5px;
+    left:5px;
+    height:105px;
+    width:105px;
+    border-radius:52.5px;
+    border:solid 1px #161616;
+    background-color:#949494;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .status{
+      cursor:pointer;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height:90px;
+      width:90px;
+      border-radius:45px;
+      background-color:#161616;
+      opacity:0.8;
+
+      span{
+        text-align: center;
+        width:90px;
+        color:#D5DAD7;
+        font-style:italic;
+        margin-top:5px;
+        color:#FFFFFF;
+      }
+
+      .border{
+        background-color:#949494;
+        height:2px;
+        width:100%;
+      }
+
+      .play{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:100%;
+        width:calc(50% - 1px);
+
+        img{
+          height:30px;
+          width:30px;
+        }
+      }
+
+      .noplay{
+        img{
+          height:40px;
+          width:40px;
+        }
+      }
+
+      .instruction{
+        text-align: center;
+      }
+
+      div.active{
+        opacity:1;
+      }
+    }
+
+    .status.active{
+      color:#FFFFFF;
+      opacity:1;
+    }
+  }
+}
+
+.game-code{
+  margin-bottom:15px;
+}
+
+.button-panel{
+  display: flex;
+
+  jn-button{
+    margin-right:10px;
+  }
+}
+
+input{
+  text-align:center;
+  padding:10px;
+  font-size:1.25em;
+  margin:10px 0px;
+}

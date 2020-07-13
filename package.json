@@ -1,57 +1,47 @@
 {
-	"name": "domino-game",
-	"version": "2.0.2",
-	"description": "Domino is a game made in node websocket.",
-	"main": "./._build/Server.js",
-	"engines": {
-		"node": "10.18.0"
-	},
-	"scripts": {
-		"build": "tslint --project . && tsc",
-		"serve": "nodemon --watch \"src/**/*\" -e ts --exec \"ts-node -r tsconfig-paths/register\" ./src/Server.ts",
-		"start": "npm run build && node ./._build/Server.js",
-		"lint:ts:base": "tslint --project tsconfig.json --config tslint.json",
-		"lint:ts": "npm run lint:ts:base \"src/**/*.ts\""
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/felipefm32/NodeDomino.git"
-	},
-	"keywords": [
-		"Domino",
-		"Game",
-		"Websocket",
-		"Online",
-		"Express",
-		"HTML5",
-		"Typescript",
-		"socket.io"
-	],
-	"author": {
-		"name": "Felipe Mateus",
-		"email": "contato@felipefm32.com.br",
-		"url": "https://felipemateus.com/"
-	},
-	"license": "CC",
-	"dependencies": {
-		"dotenv": "8.2.0",
-		"express": "^4.17.1",
-		"express-session": "~1.17.1",
-		"socket.io": "^2.3.0"
-	},
-	"devDependencies": {
-		"@types/socket.io": "^2.1.8",
-		"@types/node": "^14.0.13",
-		"nodemon": "^2.0.4",
-		"typescript": "3.9.5",
-		"@types/dotenv": "8.2.0",
-		"ts-node": "8.10.2",
-		"tsconfig-paths": "3.9.0",
-		"tslint": "6.1.2",
-		"lint-staged": "10.2.11"
-	},
-	"bugs": {
-		"url": "https://github.com/felipefm32/NodeDomino/issues"
-	},
-	"homepage": "https://domino.felipefm32.com"
+  "name": "domino",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.8",
+    "@angular/common": "~8.2.8",
+    "@angular/compiler": "~8.2.8",
+    "@angular/core": "~8.2.8",
+    "@angular/forms": "~8.2.8",
+    "@angular/platform-browser": "~8.2.8",
+    "@angular/platform-browser-dynamic": "~8.2.8",
+    "@angular/router": "~8.2.8",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.28",
+    "@angular/cli": "~8.3.6",
+    "@angular/compiler-cli": "~8.2.8",
+    "@angular/language-service": "~8.2.8",
+    "@types/jasmine": "~3.3.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "^5.0.0",
+    "jasmine-core": "~3.4.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.1.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3"
+  }
 }

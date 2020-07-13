@@ -1,0 +1,83 @@
+:host{
+  z-index:100;
+
+  .jn-player{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .status{
+      display:flex;
+      align-items: center;
+
+      .score{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        width:50px;
+        height:30px;
+        margin:0 auto;
+        margin-right:10px;
+
+        .point{
+          width:10px;
+          height:10px;
+          border-radius:5px;
+          background-color: #000000;
+          margin-right:10px;
+          margin-bottom:10px;
+        }
+
+        .point:nth-child(3n){
+          margin-right:0px;
+        }
+      }
+
+      .profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .details{
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+          border:solid 3px #6A6A6A;
+          width:150px;
+          border-radius:40px;
+          color:#FFFFFF;
+          background-color:#161616;
+          padding:7px 0px;
+
+          div{
+            text-align:center;
+            width:100%;
+            padding:2.5px 0px;
+          }
+
+          .name{
+            font-weight:bold;
+          }
+
+          .role{
+            font-size:0.9em;
+          }
+        }
+      }
+    }
+  }
+
+  .jn-player{
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+:host.left{
+  transform:rotate(270deg);
+}
+
+:host.right{
+  transform:rotate(90deg);
+}

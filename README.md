@@ -1,41 +1,27 @@
-# domino-game
+# Domino
 
-domino-game é jogo de dominó online feito em html5,node.js e websocket.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
+## Development server
 
-[![Screenshot](https://felipemateus.com/wp-content/uploads/2017/06/2019-06-24-e1561431327464.png "screenshot")](https://felipemateus.com/wp-content/uploads/2017/06/2019-06-24-e1561431327464.png "screenshot")
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-## Instaling
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
-```bash
-git clone https://github.com/felipefm32/NodeDomino.git
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-```bash
-cd NodeDomino
-```
+## Running unit tests
 
-```bash
-npm install
-```
-## Building
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```bash
-npm run build 
-```
+## Running end-to-end tests
 
-## Running
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-```bash
-npm start 
-```
+## Further help
 
-
-
-Veja Mais [Aqui](https://felipemateus.com/blog/2017/06/domino).
-
-## Author
-
-**[Felipe Mateus](https://felipemateus.com)** - [Felipefm32](https://github.com/felipefm32)
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -1,0 +1,39 @@
+{
+  "endpoints":[
+    {
+      "name":"Game Collection",
+      "path":"games",
+      "controller":"GameCollection",
+      "roles":{},
+      "parameters":[]
+    },
+    {
+      "name":"Game Resource",
+      "path":"games/@",
+      "controller":"GameResource",
+      "roles":{},
+      "parameters":["game"]
+    },
+    {
+      "name":"Player Collection",
+      "path":"games/@/players",
+      "controller":"PlayerCollection",
+      "roles":{},
+      "parameters":["game"]
+    },
+    {
+      "name":"Player Resource",
+      "path":"games/@/players/@",
+      "controller":"PlayerResource",
+      "roles":{},
+      "parameters":["game","player"]
+    },
+    {
+      "name":"Plays Collection",
+      "path":"games/@/plays",
+      "controller":"PlayCollection",
+      "roles":{},
+      "parameters":["game"]
+    }
+  ]
+}

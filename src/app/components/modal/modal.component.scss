@@ -1,0 +1,44 @@
+.modal-overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index:9999;
+  background-color: rgba(68,68,68,0.7);
+
+  .jn-modal{
+    max-width: 460px;
+    width:90%;
+    max-height:280px;
+    background: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    color: #2FF500;
+    text-align: center;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .content{
+      margin:15px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    /*button:hover{
+      background-image: radial-gradient(at center center, #ff0000 0%, #330505 100%);
+      color: white;
+      padding: 8px 40px;
+      font-size: 21px;
+      border: 1px solid #707070;
+      font-family: 'Open Sans';
+      font-weight: 600;
+    }*/
+    }
+  }
+}
