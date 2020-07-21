@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Open Sans';
 
     .content{
       margin:15px 0px;
@@ -40,5 +41,19 @@
       font-weight: 600;
     }*/
     }
+  }
+}
+@media only screen and (max-width: 767px){
+  .jn-modal{
+    width:290px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width:1024px){
+  .jn-modal{
+    width:375px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 }

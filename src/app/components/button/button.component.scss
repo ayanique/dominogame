@@ -8,3 +8,11 @@
   padding:10px;
   cursor:pointer;
 }
+@media only screen and (max-width: 767px){
+  .jn-button{
+    border:solid 2px #6A6A6A;
+    width:110px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+  }
+}

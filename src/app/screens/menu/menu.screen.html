@@ -1,9 +1,9 @@
 <div style="background-color: #171727;"id='menu-screen'>
   <div class='menu'>
-    <p style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px #DCE1D2, 0 0 15px #758C2B; font-weight: 800; font-size: 65px; font-family:'Open Sans';">Dominoes</p>
-    <img src="../assets/dom.png" width="350px" height="350px">
+    <p class="dom-title">Dominoes</p>
+    <img class="dom-back" src="../assets/dom.png" width="350px" height="350px">
 
-    <div class='items' style="background-color: rgba(15, 14, 14, 0.58); border: 1px solid #707070; padding: 40px 120px; margin-top: -265px;">
+    <div class='menu-items'>
       <div class='item' (click)="soloPlay()">Solo Play</div>
       <div class='item' (click)="multiplayer()">Multiplayer</div>
       <div class='item' (click)="joinModal.show()">Join Game</div>
@@ -12,7 +12,7 @@
   </div>
 </div>
 <jn-modal #setupModal>
-  <h1>Play Style</h1>
+  <h1 class="play-title">Play Style</h1>
   <!--div [(ngModel)]="type">
   <button style="background-image: radial-gradient(at center center, #A82626 0%, #330505 100%); color: white; padding: 8px 40px; font-size: 21px; border: 1px solid #707070; margin-right: 20px; font-family: 'Open Sans'; font-weight: 600;" type="button" value="push">Push</button>
   <button style="background-image: radial-gradient(at center center, #A82626 0%, #330505 100%); color: white; padding: 8px 40px; font-size: 21px; border: 1px solid #707070; font-family: 'Open Sans'; font-weight: 600;" type="button" value="jail">Jail</button>

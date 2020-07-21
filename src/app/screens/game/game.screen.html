@@ -1,5 +1,5 @@
 <div id='game-screen'>
-  <div class='close' (click)="exit()"><img src='assets/close.png' alt='close' /></div>
+  <div class='close' (click)="exit()"><img src='assets/close.png' alt='close' style="width: 32px; height: 32px;"/></div>
   <jn-player [player]='game.players[(viewPoint + 2) % 4]' [ngClass]="{active:game.getActivePlayer() == game.players[(viewPoint + 2) % 4]}" position="top"></jn-player>
   <jn-player [player]='game.players[(viewPoint+3) % 4]' [ngClass]="{active:game.getActivePlayer() == game.players[(viewPoint + 3) % 4]}" position="left"></jn-player>
   <jn-board [board]="game.board"></jn-board>

@@ -44,6 +44,7 @@
     position: absolute;
     bottom: 50px;
     left: 70px;
+    color: white;
   }
 
   .active-player{
@@ -61,11 +62,23 @@
       align-items: center;
       height:95px;
       margin-bottom:15px;
-      margin-right: 450px;
+      margin-right: 0px;
 
       jn-domino{
         transform:rotate(90deg);
-        margin:0px 10px;
+        margin:0px -29px;
+      }
+      @media only screen and (max-width: 767px){
+        jn-domino{
+          transform:rotate(90deg);
+          margin:0px -36px;
+        }
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px){
+        jn-domino{
+          transform:rotate(90deg);
+          margin:0px -33px;
+        }
       }
 
       jn-domino.active{
