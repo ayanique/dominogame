@@ -25,7 +25,7 @@ export class BoardComponent{
   }
 
   ngAfterViewInit(){
-    this._verticalCapacity = (window.innerHeight - 145)/2 - 25;
+    this._verticalCapacity = (window.innerHeight - 45)/2 - 25;
   }
 
   reset(){
@@ -40,9 +40,9 @@ export class BoardComponent{
     let currentDomino = this.board.center;
     while(currentDomino && currentDomino.next){
       if(currentDomino.next.isDouble()){
-        height += 25;
-      }else{
         height += 50;
+      }else{
+        height += 100;
       }
 
       if(height <= this._verticalCapacity){
@@ -90,9 +90,9 @@ export class BoardComponent{
     let currentDomino = this.board.center;
     while(currentDomino && currentDomino.previous){
       if(currentDomino.previous.isDouble()){
-        height += 25;
-      }else{
         height += 50;
+      }else{
+        height += 100;
       }
 
       if(height <= this._verticalCapacity){
